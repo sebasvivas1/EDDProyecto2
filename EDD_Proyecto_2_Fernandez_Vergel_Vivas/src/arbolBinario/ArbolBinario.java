@@ -6,7 +6,7 @@ import herramientas.Funciones;
 public class ArbolBinario {
     
     NodoArbol root;
-    private String txt = "-";
+    public String txt = "-";
 
     public ArbolBinario() {
         this.root = null;
