@@ -88,7 +88,7 @@ public class ArbolBinario {
         this.setTxt(Funciones.cargarArchivoTxt("datos/arbol.txt"));
 
         if (this.getTxt().isEmpty()) { // TXT vacio
-            this.root = new NodoArbol("pez");
+            this.root = new NodoArbol("pájaro");
         } else {
             String data[] = getTxt().split("-");
 

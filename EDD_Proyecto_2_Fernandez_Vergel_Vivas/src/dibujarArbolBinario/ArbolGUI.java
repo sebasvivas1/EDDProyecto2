@@ -9,7 +9,7 @@ import java.awt.BorderLayout;
 public class ArbolGUI extends JFrame{
 
     public ArbolBinario tree;
-    public DibujarArbol drawer;
+    public DibujarTestArbol drawer;
     private JPanel Pane;
 
     /**
@@ -17,13 +17,12 @@ public class ArbolGUI extends JFrame{
      */
     public ArbolGUI(ArbolBinario tree) {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        this.setLocationRelativeTo(null);
         setBounds(100, 100, 1500, 900);
 
         Pane = new JPanel();
         Pane.setBorder(new EmptyBorder(3, 3, 3, 3));
         Pane.setLayout(new BorderLayout(0, 0));
-        drawer = new DibujarArbol(tree);
+        drawer = new DibujarTestArbol(tree);
 
         Pane.add(drawer);
         this.setLayout(new BorderLayout());
