@@ -1,10 +1,13 @@
 
 package main;
 
-public class Main {
+import ventanas.Game;
+import javax.swing.JOptionPane;
 
+public class Main {
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        new Game().setVisible(true);
     }
     
 }
