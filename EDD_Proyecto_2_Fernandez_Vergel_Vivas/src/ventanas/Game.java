@@ -76,21 +76,21 @@ public class Game extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("frame2"); // NOI18N
 
-        ComenzarBtm.setText("Juego Nuevo");
+        ComenzarBtm.setText("Adivinar Animal");
         ComenzarBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComenzarBtmActionPerformed(evt);
             }
         });
 
-        DibujarArbolBtm.setText("Dibujar Arbol");
+        DibujarArbolBtm.setText("Mostrar base de conocimientos");
         DibujarArbolBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DibujarArbolBtmActionPerformed(evt);
             }
         });
 
-        LimpiarBtm.setText("Eliminar base de datos");
+        LimpiarBtm.setText("Borrar base de conocimientos");
         LimpiarBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LimpiarBtmActionPerformed(evt);

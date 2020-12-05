@@ -47,23 +47,16 @@ public class Juego {
         String animalNodo = (String) nodo.getData();
         String nuevoA = JOptionPane.showInputDialog(null, "Cual es tu animal?");
 
-        String pregunta = JOptionPane.showInputDialog(null, "Que pregunta con respuesta si/no puedo hacer"
-                + " para poder decir que es un@ " + nuevoA);
+        String pregunta = JOptionPane.showInputDialog(null, "Que caracteriza a un@ "  + nuevoA);
 
         NodoArbol nodo1 = new NodoArbol(animalNodo);
         NodoArbol nodo2 = new NodoArbol(nuevoA);
 
         nodo.setData("¿" + pregunta + "?");
+        
+        tree.insertar_izq(nodo.getData(), nodo1.getData());
+        tree.insetar_der(nodo.getData(), nodo2.getData());
 
-        if (respuesta("Su animal es un@ " + nuevoA + "?")) {
-
-            tree.insertar_izq(nodo.getData(), nodo1.getData());
-            tree.insetar_der(nodo.getData(), nodo2.getData());
-
-        } else {
-            tree.insertar_izq(nodo.getData(), nodo2.getData());
-            tree.insetar_der(nodo.getData(), nodo1.getData());
-        }
     }
     
     /**

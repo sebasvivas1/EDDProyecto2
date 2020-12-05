@@ -51,7 +51,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="ComenzarBtm">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Juego Nuevo"/>
+        <Property name="text" type="java.lang.String" value="Adivinar Animal"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComenzarBtmActionPerformed"/>
@@ -59,7 +59,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="DibujarArbolBtm">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Dibujar Arbol"/>
+        <Property name="text" type="java.lang.String" value="Mostrar base de conocimientos"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DibujarArbolBtmActionPerformed"/>
@@ -67,7 +67,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="LimpiarBtm">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Eliminar base de datos"/>
+        <Property name="text" type="java.lang.String" value="Borrar base de conocimientos"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LimpiarBtmActionPerformed"/>
