@@ -11,17 +11,17 @@ import juego.Juego;
 public class Game extends javax.swing.JFrame {
 
     private ArbolBinario tree;
-    
+
     public Game() {
         tree = new ArbolBinario();
         tree.ObtenerArbolBinarioTxt();
-        
+
         initComponents();
-        this.setSize(new Dimension(300, 300));
+        this.setSize(new Dimension(420, 410));
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
+
     //Inicio juego
     public void comenzar() {
 
@@ -72,54 +72,60 @@ public class Game extends javax.swing.JFrame {
         ComenzarBtm = new javax.swing.JButton();
         DibujarArbolBtm = new javax.swing.JButton();
         LimpiarBtm = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("frame2"); // NOI18N
+        setUndecorated(true);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        ComenzarBtm.setBackground(new java.awt.Color(204, 204, 255));
+        ComenzarBtm.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        ComenzarBtm.setForeground(new java.awt.Color(0, 0, 0));
         ComenzarBtm.setText("Adivinar Animal");
         ComenzarBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComenzarBtmActionPerformed(evt);
             }
         });
+        getContentPane().add(ComenzarBtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 250, 50));
 
+        DibujarArbolBtm.setBackground(new java.awt.Color(255, 204, 204));
+        DibujarArbolBtm.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        DibujarArbolBtm.setForeground(new java.awt.Color(0, 0, 0));
         DibujarArbolBtm.setText("Mostrar base de conocimientos");
         DibujarArbolBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DibujarArbolBtmActionPerformed(evt);
             }
         });
+        getContentPane().add(DibujarArbolBtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 250, 52));
 
+        LimpiarBtm.setBackground(new java.awt.Color(204, 255, 204));
+        LimpiarBtm.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        LimpiarBtm.setForeground(new java.awt.Color(51, 51, 51));
         LimpiarBtm.setText("Borrar base de conocimientos");
         LimpiarBtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LimpiarBtmActionPerformed(evt);
             }
         });
+        getContentPane().add(LimpiarBtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 250, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LimpiarBtm, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                    .addComponent(DibujarArbolBtm, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ComenzarBtm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ComenzarBtm, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(DibujarArbolBtm, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(LimpiarBtm, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jButton3.setBackground(new java.awt.Color(255, 204, 204));
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 51, 51));
+        jButton3.setText("X");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 70, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ventanas/collage-different-kinds-animals_53876-40443.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 410));
     }// </editor-fold>//GEN-END:initComponents
 
     private void ComenzarBtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComenzarBtmActionPerformed
@@ -141,10 +147,16 @@ public class Game extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_LimpiarBtmActionPerformed
-  
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ComenzarBtm;
     private javax.swing.JButton DibujarArbolBtm;
     private javax.swing.JButton LimpiarBtm;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

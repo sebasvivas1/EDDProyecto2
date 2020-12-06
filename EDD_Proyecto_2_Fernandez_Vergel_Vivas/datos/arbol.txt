@@ -1,8 +1,0 @@
--
-¿null?
-pájaro
-null
--
-pájaro
-¿null?
-null

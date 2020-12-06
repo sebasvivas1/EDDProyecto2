@@ -17,7 +17,7 @@ public class ArbolGUI extends JFrame{
      */
     public ArbolGUI(ArbolBinario tree) {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        setBounds(100, 100, 1500, 900);
+        setBounds(0, 0, 1280, 900);
 
         Pane = new JPanel();
         Pane.setBorder(new EmptyBorder(3, 3, 3, 3));
@@ -26,6 +26,7 @@ public class ArbolGUI extends JFrame{
 
         Pane.add(drawer);
         this.setLayout(new BorderLayout());
+        this.setLocationRelativeTo(null);
         setContentPane(Pane);
         this.tree = tree;
         setVisible(true);
